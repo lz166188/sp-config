@@ -1,0 +1,16 @@
+# item-service-dev.yml
+spring:
+  application:
+    name: item-service
+  cloud:        #覆盖配置中心的配置,本地配置优先级更高
+    config:
+      override-none: true
+      
+server:
+  port: 8001
+
+eureka:
+  client:
+    service-url:
+     defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
+      
