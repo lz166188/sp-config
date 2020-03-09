@@ -5,6 +5,11 @@ spring:
   cloud:        #覆盖配置中心的配置,本地配置优先级更高
     config:
       override-none: true
+  rabbitmq:  #配置文件中添加 rabbitmq 连接信息
+    host: 192.168.64.140
+    port: 5672
+    username: admin
+    password: admin
       
 server:
   port: 8001

@@ -5,6 +5,11 @@ spring:
   cloud:
     config:
       override-none: true
+  rabbitmq:  #配置文件中添加 rabbitmq 连接信息
+    host: 192.168.64.140
+    port: 5672
+    username: admin
+    password: admin
       
 server:
   port: 8201
