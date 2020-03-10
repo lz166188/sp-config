@@ -19,6 +19,10 @@ eureka:
     service-url:
       defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
 
+  instance:
+    prefer-ip-address: true # 使用ip进行注册
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+
 zuul:   #zuul代理转发的路由(routes)配置规则,如果不配置，会从eureka获取注册表,完成自动配置
   routes:  
     item-service: /item-service/**     #转发至item-service下的所有请求
